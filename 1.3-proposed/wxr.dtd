@@ -1,0 +1,11 @@
+<!ENTITY RSS_Version '2.0'>
+
+<!ENTITY WXR_Version '1.3'>
+<!ENTITY WXR_NamespaceURI 'http://wordpress.org/export/'>
+<!ENTITY WXR_MIME_TYPE 'application/vnd.wordpress.wxr+xml'>
+
+<!ENTITY Dublin_Core_Version '1.1'>
+<!ENTITY Dublin_Core_NamespaceURI 'http://purl.org/dc/elements/&Dublin_Core_Version;/'>
+
+<!ENTITY RSS_Content_Module_Version '1.0'>
+<!ENTITY RSS_Content_Module_NamespaceURI 'http://purl.org/rss/&RSS_Content_Module_Version;/modules/content/'>
