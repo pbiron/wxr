@@ -1,24 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE xs:schema [
-<!--
-	These entity declarations are to ensure the consistency of the use of namespaceURIs in the various
-	@targetNamespace's throughout this schema...and to make it easier to create/maintain schemas for
-	WXR 1.1 and 1.0 (because then I can just copy this schema document, edit the WXR_Version entity
-	decl and remove any element decls that weren't in that previous version).
-	-->
-
-<!ENTITY RSS_Version '2.0'>
-
-<!ENTITY WXR_Version '1.2'>
-<!ENTITY WXR_NamespaceURI 'http://wordpress.org/export/&WXR_Version;/'>
-<!ENTITY WXR_Excerpt_NamespaceURI '&WXR_NamespaceURI;excerpt/'>
-
-<!ENTITY Dublin_Core_Version '1.1'>
-<!ENTITY Dublin_Core_NamespaceURI 'http://purl.org/dc/elements/&Dublin_Core_Version;/'>
-
-<!ENTITY RSS_Content_Module_Version '1.0'>
-<!ENTITY RSS_Content_Module_NamespaceURI 'http://purl.org/rss/&RSS_Content_Module_Version;/modules/content/'>
-]>
+<!DOCTYPE xs:schema PUBLIC "-//WordPress//DTD WXR 1.2//EN" "wxr.dtd">
 <xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'
 		xmlns:wp='&WXR_NamespaceURI;'
 		xmlns:excerpt='&WXR_Excerpt_NamespaceURI;'
@@ -125,7 +106,15 @@
 	</xs:annotation>
 	
 	<xs:import namespace='&WXR_Excerpt_NamespaceURI;' schemaLocation='wxr_excerpt.xsd' />
-	
+	<xs:import schemaLocation='rss-20.xsd'>
+		<xs:annotation>
+			<xs:documentation>
+				This import of the RSS schema document is not technically necessary.  However, it makes generating
+				documentation from this schema document easier. 
+			</xs:documentation>
+		</xs:annotation>		
+	</xs:import>
+
 	<xs:simpleType name='email'>
 		<xs:restriction base='xs:string'>
 			<xs:annotation>
