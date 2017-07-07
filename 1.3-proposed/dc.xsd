@@ -1,18 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!--!DOCTYPE xs:schema PUBLIC "-//WordPress//DTD WXR 1.3//EN" "wxr.dtd"-->
-<!DOCTYPE xs:schema [
-<!ENTITY RSS_Version '2.0'>
-
-<!ENTITY WXR_Version '1.3'>
-<!ENTITY WXR_NamespaceURI 'http://wordpress.org/export/'>
-<!ENTITY WXR_MIME_TYPE 'application/vnd.wordpress.wxr+xml'>
-
-<!ENTITY Dublin_Core_Version '1.1'>
-<!ENTITY Dublin_Core_NamespaceURI 'http://purl.org/dc/elements/&Dublin_Core_Version;/'>
-
-<!ENTITY RSS_Content_Module_Version '1.0'>
-<!ENTITY RSS_Content_Module_NamespaceURI 'http://purl.org/rss/&RSS_Content_Module_Version;/modules/content/'>
-]>
+<!DOCTYPE xs:schema PUBLIC "-//WordPress//DTD WXR 1.3//EN" "wxr.dtd">
 <xs:schema
 		xmlns:xs='http://www.w3.org/2001/XMLSchema'
 		elementFormDefault='qualified'
