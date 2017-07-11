@@ -318,23 +318,6 @@
 					<xs:documentation>
 						Represents a URL that points to the documentation for WXR. 
 					</xs:documentation>
-					<xs:documentation>
-						@todo open a trac ticket to consider whether to add this standard RSS <docs/> element
-						to this model group, whose value would be a URL that pointed to this schema (or HTML
-						documentation generataed from it).
-					</xs:documentation>
-					<xs:documentation>
-						@todo should the actual documentation be accesssible at the WXR namespace URI?
-						Probably not.  One common practice is that dereferencing a namespace URI gives
-						a 'namespace document', which provides only high-level documentation of the namespace
-						and provides pointers to more indepth documentation.
-					</xs:documentation>
-					<xs:documentation>
-						see https://www.w3.org/1999/XSL/Transform for an representative example of
-						what I consider a 'good' namespace document.  See also https://www.w3.org/2005/07/13-nsuri
-						for the W3C's policy on choosing namespace URI's for languages they define in their
-						specifications (including their policy on namespace documents).
-					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base='xs:anyURI'>

@@ -53,27 +53,9 @@
 			https://core.trac.wordpress.org/ticket/27896 and continuing in my attempts to make
 			https://github.com/humanmade/WordPress-Importer be namespace-aware) I've started to come up with
 			a list of changes that I think should be made to WXR.  Some of those are documented in
-			@todo's throughout this schema (search for 'trac ticket').  But I'll list a really
-			big one right here at the top.
-			
-			@todo open a trac ticket to consider changing the namespaceURI versioing policy for WXR
-			(not the policy, to the extent there is one, on when to version WXR, but the defacto 'policy'
-			of including the version number in the namespace URI).
-			
-			Doing namespace-aware parsing (that is backwards compatible in the sense of handling WXR files
-			from different versions with the same code) would be MUCH easier if the WXR namespace URI did
-			NOT change with each version.  Towards that goal, the namespace URI in this proposed version of
-			WXR is 'http://wordpress.org/export/'.  The WXR version is encoded in this propoosal
-			with the wxr:version attribute on <rss/>. 
-			
-			I recognize that this change would represent a MAJOR backwards imcompatibility (and thus will
-			require A LOT of discussion and concensus building before it could be enacted) but it would
-			would make FUTURE changes to WXR and the corresponding export/import code easier to deal with.
-		</xs:documentation>
-		<xs:documentation>
-			@todo open a meta trac ticket to consider adding documentation generated from this schema (assuming
-			it, or something like it, is accepted as an accurate/useful representation of WXR) to
-			DevHub.
+			@todo's throughout this schema (search for 'trac ticket').  Others are documented at
+			https://github.com/pbiron/wxr/issues?q=is%3Aissue+label%3A%22core+trac+ticket%22 and
+			https://github.com/pbiron/wxr/issues?q=is%3Aissue+label%3A%22meta+trac+ticket%22
 		</xs:documentation>
 		<xs:documentation>
 			In addition to the change in namespace URI, the proposed version of WXR represented by this
@@ -101,15 +83,6 @@
 		<xs:documentation>
 			@todo further study the RSS Board's best practices (@link http://www.rssboard.org/rss-profile) and TRY to
 			conform to it...and document the differences, including WHY a recommendation is not followed.
-		</xs:documentation>
-		<xs:documentation>
-			@todo investigate the history of WHY WXR is an RSS profile.  export/import
-			would be somewhat easier if WXR were a "pure" WP-defined markup language
-			(exactly HOW MUCH is a matter of opinion).
-
-			I suspect the reason an RSS profile was chosen is because other CMS's (e.g., Drupal)
-			already have RSS import functionality and making WXR an RSS profile makes it easier
-			for them to import.
 		</xs:documentation>
 	</xs:annotation>
 
@@ -559,13 +532,6 @@
 					<xs:documentation>
 						Represents the URL for the WP_Post whose post_type is 'attachment'.  Will not be present if
 						the post_type is not 'attachment.
-					</xs:documentation>
-					<xs:documentation>
-						@todo consider opening a trac ticket to use the standard RSS <enclosure/> element
-						for this, given that the the RSS Advisory Board's "Best Practices" profile says
-						"When a namespace element duplicates the functionality of an element defined in
-						RSS, the core element should be used." and the semantics of RSS's <enclosure/>
-						exactly matches the semantics of this element.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
