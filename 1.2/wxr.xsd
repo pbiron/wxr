@@ -660,7 +660,7 @@
 									</xs:documentation>
 								</xs:annotation>
 								<xs:element name='category_nicename' type='xs:string' />
-								<xs:element name='category_parent' type='xs:string' />
+								<xs:element name='category_parent' type='xs:string' minOccurs='0'/>
 								<xs:element name='cat_name' type='xs:string' />
 								<xs:element name='category_description' type='xs:string' minOccurs='0' />
 							</xs:all>
