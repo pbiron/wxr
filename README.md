@@ -29,7 +29,7 @@ enough to capture the rules of RSS, so validating with a 1.0 schema would be use
 HTML browsable documentation generated from these schemas is available at:
 
 1. [WXR 1.2](http://sparrowhawkcomputing.com/wxr/1.2/docs/wxr.html)
-1. [WXR 1.3 Proposed](http://sparrowhawkcomputing.com/wxr/1.3/docs/wxr.html)
+1. [WXR 1.3 Proposed](http://sparrowhawkcomputing.com/wxr/1.3-proposed/docs/wxr.html)
 
 If I could figure out how to add that documentation as wiki pages here on GitHub I would, but I can't,
 so I won't :-)
