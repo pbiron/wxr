@@ -300,17 +300,23 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name='generator' type='xs:string' minOccurs='0'>
+			<xs:element name='generator' minOccurs='0'>
 				<xs:annotation>
+					<xs:documentation>
+						Represents the "filters" used to generate the export. 
+					</xs:documentation>
 					<xs:documentation>
 						@todo open a trac ticket to consider uncoupling the output of this element from
 						the 'rss_head' action, and explicitly output it in export.php.
 					</xs:documentation>
-					<xs:documentation>
-						@todo say something about <generator/> being output by the default func hooked to
-						'rss_head', but that plugins might remove that default func and output something else. 
-					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base='xs:anyURI'>
+							<xs:attribute ref='wxr:wp_version' use='required'/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name='docs' minOccurs='0'>
 				<xs:annotation>
