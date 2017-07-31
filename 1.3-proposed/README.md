@@ -68,7 +68,7 @@ Depending on how you run your tests, it can be useful to add the following to th
 
 ### Sample WXR Documents
 
-The [sample-wxr-documents](sample-wxr-documents) directory contains some sample WXR 1.2 instances that can be used for you to test this schema out.  For example, `small-export-ns-aware.xml` is a modified version of the `small-export.xml` that is part of the unit-test harness for WP.  The modifications introduce many different namespace prefixes for the WXR namespace.  That document would fail to import with the standard importer (which is not namespace-aware) but imports like a charm with the importer at [WordPress Importer Feature Plugin](https://github.com/pbiron/WordPress-Importer) (which is namespace-aware).
+The [sample-wxr-documents](sample-wxr-documents) directory contains some sample WXR 1.3-proposed instances that can be used for you to test this schema out.  For example, `small-export-ns-aware.xml` is a modified version of the `small-export.xml` that is part of the unit-test harness for WP.  The modifications introduce many different namespace prefixes for the WXR namespace.  That document would fail to import with the standard importer (which is not namespace-aware) but imports like a charm with the importer at [WordPress Importer Feature Plugin](https://github.com/pbiron/wordpress-importer-v2) (which is namespace-aware).
 
 It would be **very** helpful for the development/maintainence of this schema if folks could contribute sample WXR documents to this project.  Just submit a pull request to add them to the [sample-wxr-documents](sample-wxr-documents) directory.
 
