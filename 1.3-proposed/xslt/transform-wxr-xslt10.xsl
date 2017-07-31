@@ -166,7 +166,13 @@
 		<xsl:attribute name='wxr:slug'><xsl:value-of select='.'/></xsl:attribute>
 	</xsl:template>
 
-
+	<!--
+		add @wxr:wp_version to RSS's generator
+	  -->
+	<xsl:template match='generator' priority='10'>
+		<generator wxr:wp_version='{substring-after( ., "?v=" )}'/>
+	</xsl:template>
+	
 	<!--
 		strip wp:wxr_version (since we using /rss/@wxr:version) and wp:base_blog_url
 		(since it is redundant with /rss/channel/link)

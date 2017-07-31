@@ -266,6 +266,16 @@
 	</xsl:template>
 
 	<!--
+		rewrite generator
+	  -->
+	<xsl:template match='generator' priority='11'>
+		<generator>
+			<xsl:text>http://wordpress.org?v=</xsl:text>
+			<xsl:value-of select='@wxr:wp_version'/>
+		</generator>
+	</xsl:template>
+
+	<!--
 		Strip /rss/@wxr:version and /rss/@wxr:plugins
 	  -->
 	<xsl:template match='/rss/attribute::*[namespace-uri() = "http://wordpress.org/export/" and
