@@ -402,6 +402,45 @@
 					</xs:complexContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name='link' minOccurs='0' maxOccurs='unbounded'>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base='wxr:open_content'>
+							<xs:all>
+								<xs:element name='id' type='xs:positiveInteger'/>
+								<xs:element name='url' type='xs:anyURI'/>
+								<xs:element name='name' type='wxr:key'/>
+								<xs:element name='image' type='xs:anyURI'/>
+								<xs:element name='target'>
+									<xs:simpleType>
+										<xs:restriction base='xs:string'>
+											<xs:enumeration value='_blank'/>
+											<xs:enumeration value='_top'/>
+											<xs:enumeration value=''/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name='description' type='xs:string'/>
+								<xs:element name='visible'>
+									<xs:simpleType>
+										<xs:restriction base='xs:string'>
+											<xs:enumeration value='Y'/>
+											<xs:enumeration value='N'/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name='owner' type='wxr:key'/>
+								<xs:element name='rating' type='xs:int'/>
+								<xs:element name='updated' type='wxr:date_time'/>
+								<xs:element name='rel' type='xs:string'/>
+								<xs:element name='notes' type='xs:string'/>
+								<xs:element name='rss' type='xs:anyURI'/>
+								<xs:element name='category' type='wxr:key' minOccurs='0' maxOccurs='unbounded'/>
+							</xs:all>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:all>
 	</xs:group>
 
