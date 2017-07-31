@@ -185,10 +185,10 @@
 		the "not( @wxr:version ) predicate is to ensure that this transform is idempotent
 		(i.e., we should NOT strip item/description if we're asked to transform a WXR 1.3 instance)
 	-->
-	<xsl:template match='/rss[not( @wxr:version )]/channel/item/description'/>
+	<xsl:template match='/rss[not( @wxr:version )]/channel/item/description' priority='10'/>
 
 	<!--
 		strip item/pubDate
 	-->
-	<xsl:template match='item/pubDate'/>
+	<xsl:template match='item/pubDate' priority='10'/>
 </xsl:transform>
