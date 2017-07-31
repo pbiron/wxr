@@ -225,43 +225,6 @@
 		</xs:annotation>
 	</xs:attribute>
 	
-	<xs:attribute name='plugins'>
-		<xs:annotation>
-			<xs:documentation>
-				Represents the plugins that have added extension elements to the WXR instance.
-			</xs:documentation>
-			<xs:documentation>
-				The value of this attribute is a list of {pluign file path|plugin url} pairs.  The value
-				of this attribute MAY be used by the import plugin to warn the user performing an
-				import that one or more plugins added extension elements to the WXR instance and
-				allow that user to activate/install the relevant plugins, if necessary.
-			</xs:documentation>
-			<xs:documentation>
-				The structure and function of this attribute is similar to @xsi:schemaLocation
-				(see https://www.w3.org/TR/xmlschema11-1/#xsi.schemaLocation).
-			</xs:documentation>
-		</xs:annotation>
-		<xs:simpleType>
-			<xs:restriction base='xs:string'>
-				<xs:assertion test='fn:count( fn:tokenize( $value, " ") ) mod 2 eq 0'>
-					<xs:annotation>
-						<xs:documentation>
-							This assertion guarantees that values are, indeed, pairs by
-							checking that there are an even number of "tokens" after spliting
-							the value on the space character.
-							
-							@todo investigate different scenarios for exporters encoding and
-							importers decoding the file path and url when they might contain spaces
-							(e.g., whether urlencode()/urldecode(), rawurlencode()/rawurldecode(),
-							or just simple str_replace( ' ', '%20', $val )/str_replace( '%20', ' ', $val)
-							would be better).
-						</xs:documentation>
-					</xs:annotation>
-				</xs:assertion>
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-	
 	<xs:attribute name='slug' type='wxr:key'>
 		<xs:annotation>
 			<xs:documentation>

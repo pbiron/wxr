@@ -248,7 +248,6 @@
 						</xs:annotation>
 					</xs:attribute>
 					<xs:attribute ref='wxr:version' use='required'/>
-					<xs:attribute ref='wxr:plugins'/>
 				</xs:extension>
 			</xs:complexContent>
 		</xs:complexType>
