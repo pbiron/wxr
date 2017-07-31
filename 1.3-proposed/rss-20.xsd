@@ -318,17 +318,23 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name='docs' minOccurs='0'>
+			<xs:element name='docs' minOccurs='0' type='xs:anyURI'>
 				<xs:annotation>
 					<xs:documentation>
 						Represents a URL that points to the documentation for WXR. 
 					</xs:documentation>
+					<xs:documentation>
+						@todo If/when this proposal gets accepted into WP Core, get .org to post a
+						a namespace document for WXR at the WXR Namespace URI.
+					</xs:documentation>
+					<xs:documentation>
+						@todo A previous version of this schema defined this with a restriction of xs:anyURI that
+						enumerated the WXR Namespace URI.  That was changed to allow plugins to export their
+						own profile of WXR (without using the hooks provided by the exporter).  In that case,
+						those plugins should output <docs/> with a URL that points to documentation for
+						their profile.
+					</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base='xs:anyURI'>
-						<xs:enumeration value='&WXR_NamespaceURI;'/>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 		</xs:all>
 	</xs:group>
