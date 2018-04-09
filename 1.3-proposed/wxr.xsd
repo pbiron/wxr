@@ -452,7 +452,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:all>
-			<xs:element name='id' type='xs:positiveInteger'>
+			<xs:element name='id' type='xs:nonNegativeInteger'>
 				<xs:annotation>
 					<xs:documentation>
 						Represents the ID of the WP_Post.
